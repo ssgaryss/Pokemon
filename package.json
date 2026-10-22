@@ -1,0 +1,13 @@
+{
+  "name": "pokemon-pocket-field",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pocket Field: a playable original Game Boy inspired creature adventure.",
+  "scripts": {
+    "dev": "node pocket-field/server.mjs",
+    "start": "node pocket-field/server.mjs",
+    "check": "npm --prefix pocket-field run check",
+    "test": "node --test pocket-field/game.test.mjs",
+    "build:offline": "node make-offline.mjs"
+  }
+}

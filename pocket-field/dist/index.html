@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eeeee4">
+  <meta name="description" content="把冒险装进口袋。在一台复古掌机里探索原野、邂逅小精灵、体验回合战斗与捕捉。">
+  <title>Pocket Field · 口袋原野</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%233b4b36'/%3E%3Cpath d='M10 12h20v16H10z' fill='%23c4d18a'/%3E%3Cpath d='M17 16h6v3h3v6H14v-6h3z' fill='%23526b36'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Pocket Field 首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>POCKET<span class="brand-light"> FIELD</span><small>口 袋 原 野</small></span></a>
+    <span class="header-note">给生活按一下暂停，给冒险按一下开始。</span>
+    <nav class="header-actions" aria-label="游戏设置">
+      <button class="quiet-button sound-toggle" id="sound-toggle" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-off" d="m16 9 6 6m0-6-6 6"/><path class="sound-on" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg><span>声音关闭</span></button>
+      <button class="help-button" id="help-open" aria-label="打开游玩指南">?</button>
+    </nav>
+  </header>
+
+  <main class="experience">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow"><span></span> 小 屏 幕 · 大 冒 险</p>
+      <h1 id="page-title">把冒险，<br>装进口袋<span class="title-dot">。</span></h1>
+      <p class="intro-copy">回到那个只需要四种颜色，<br>就能拥有整个世界的下午。</p>
+      <div class="edition"><span class="edition-badge">8-BIT</span><span>原创像素冒险 <i>VOL. 01</i></span></div>
+      <div class="mission">
+        <div class="section-label"><span>01 / 今日的冒险</span><span class="tiny-star">✳</span></div>
+        <p id="objective">和你的伙伴一起，踏入第一片草丛。</p>
+        <div class="mission-progress"><span id="progress-fill"></span></div>
+        <div class="progress-caption"><span>原野收集计划</span><span id="progress-label">01 / 03</span></div>
+      </div>
+      <div class="intro-bottom"><div class="palette-swatches" aria-label="经典四色屏"><i></i><i></i><i></i><i></i></div><span>少一点色彩，多一点想象。</span></div>
+    </section>
+
+    <section class="play-zone" id="play-zone" aria-label="口袋原野游戏机">
+      <div class="console" id="console">
+        <div class="console-top"><span>◁ PHONES</span><span>OFF · <b>ON</b> ━</span></div>
+        <div class="console-seam"></div>
+        <div class="screen-bezel">
+          <div class="bezel-title"><i></i><span>DOT MATRIX WITH STEREO SOUND</span><i></i></div>
+          <div class="power-indicator"><b></b><span>BATTERY</span></div>
+          <div class="screen-inset"><canvas id="game-screen" width="320" height="288" tabindex="0" aria-label="游戏画面。使用方向键移动，Z 或空格确认，X 返回，Enter 打开菜单。"></canvas><div class="screen-glass" aria-hidden="true"></div></div>
+          <div class="screen-bottom"><span>•</span><span>POCKET FIELD™</span><span>•</span></div>
+        </div>
+        <div class="console-brand"><span>pocket <em>FIELD</em><sup>™</sup></span><span class="model-number">DMG—01</span></div>
+        <div class="main-controls">
+          <div class="dpad" aria-label="方向控制">
+            <button class="dpad-button up" data-action="up" aria-label="向上"><span>▲</span></button>
+            <button class="dpad-button left" data-action="left" aria-label="向左"><span>◀</span></button>
+            <div class="dpad-center" aria-hidden="true"><i></i></div>
+            <button class="dpad-button right" data-action="right" aria-label="向右"><span>▶</span></button>
+            <button class="dpad-button down" data-action="down" aria-label="向下"><span>▼</span></button>
+          </div>
+          <div class="ab-controls"><div class="action-key b-key"><button data-action="b" aria-label="B 返回">B</button><span>B</span></div><div class="action-key a-key"><button data-action="a" aria-label="A 确认">A</button><span>A</span></div></div>
+        </div>
+        <div class="bottom-controls"><div class="system-buttons"><div><button data-action="select" aria-label="SELECT 图鉴"></button><span>SELECT</span></div><div><button data-action="start" aria-label="START 菜单"></button><span>START</span></div></div><div class="speaker" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="console-bottom-mark">© 1996 POCKET FIELD</div>
+      </div>
+      <div class="game-tools"><span class="live-status"><i></i><span id="game-status">冒险进行中</span></span><div><button id="save-button" title="保存游戏进度"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h11l3 3v11H3V3Zm3 0v5h7V3M6 17v-6h8v6"/></svg>保存</button><button id="fullscreen-button" title="全屏游玩"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4"/></svg><span>全屏</span></button></div></div>
+      <p class="touch-hint">方向键移动 · <kbd>Z</kbd> 确认 · <kbd>X</kbd> 返回</p>
+    </section>
+
+    <aside class="field-journal" aria-label="冒险手记">
+      <div class="journal-heading"><span class="journal-icon" aria-hidden="true">▤</span><div><h2>冒险手记</h2><p>FIELD NOTES / LIVE</p></div><span class="live-dot"></span></div>
+      <section class="journal-section partner-section"><div class="section-label"><span>我的伙伴</span><span id="party-count">01</span></div><div id="party-list" class="party-list"><p class="loading-copy">伙伴正在整装待发…</p></div></section>
+      <section class="journal-section"><div class="section-label"><span>探险背包</span><span>INVENTORY</span></div><div class="inventory"><div><span class="pixel-ball" aria-hidden="true"></span><span>精灵球</span><b id="ball-count">08</b></div><div><span class="pixel-potion" aria-hidden="true"></span><span>恢复药</span><b id="potion-count">04</b></div></div></section>
+      <section class="journal-section collection-section"><div class="section-label"><span>原野图鉴</span><span><b id="collection-count">01</b> / 06</span></div><div id="collection-grid" class="collection-grid"></div></section>
+      <div class="journal-location"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 8c0 4-5 9-5 9S5 12 5 8a5 5 0 0 1 10 0Z"/><circle cx="10" cy="8" r="1.7"/></svg><div><span>你在这里</span><strong id="location-name">苔野镇</strong></div><span id="badge-display" class="badge-display" title="完成原野挑战获得徽章">✳</span></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer"><span><i class="footer-square"></i> 不赶路，去感受路。</span><span class="footer-controls"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd><span>移动</span><kbd>Z</kbd><span>确认</span><kbd>X</kbd><span>返回</span><kbd>ENTER</kbd><span>菜单</span></span><span>本地自动存档 <span class="footer-dot">·</span> MADE TO PLAY</span></footer>
+
+  <dialog id="help-dialog"><div class="dialog-top"><span class="eyebrow">PLAYER'S MANUAL / 001</span><button class="dialog-close" aria-label="关闭指南">×</button></div><h2>你的冒险，从这里开始。</h2><p>这是一个可以通关的原创像素小世界。带上伙伴，探索苔野镇与周围的草丛。</p><div class="manual-controls"><div><kbd>↑ ↓ ← →</kbd><span>移动 / 选择</span></div><div><kbd>Z / 空格</kbd><span>A · 确认 / 对话</span></div><div><kbd>X / ESC</kbd><span>B · 返回</span></div><div><kbd>ENTER</kbd><span>START · 菜单</span></div><div><kbd>SHIFT</kbd><span>SELECT · 图鉴</span></div><div><span class="manual-touch">✚ A B</span><span>也可以点击机身按键</span></div></div><ol class="manual-quest"><li><b>去探索。</b>走进草丛，邂逅野生小精灵。面向人物或建筑入口，按 A 互动。</li><li><b>交朋友。</b>战斗中先削弱对手，再使用精灵球。记得去恢复站补充体力和物资。</li><li><b>接受挑战。</b>捕获 3 种野生精灵，找到原野守护者，赢取你的第一枚徽章。</li></ol><p class="manual-note">进度会自动保存在当前浏览器。声音默认关闭，可点击右上角开启。</p><button class="primary-button dialog-close">准备好了，出发 →</button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

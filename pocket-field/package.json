@@ -1,0 +1,13 @@
+{
+  "name": "pocket-field",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A playable, original Game Boy inspired creature adventure.",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node --test game.test.mjs",
+    "check": "node --check dist/app.js && node --check dist/game.js && node --check dist/sprites.js && node --check dist/audio.js"
+  }
+}
