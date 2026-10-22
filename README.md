@@ -6,6 +6,12 @@
 
 ## 开始游玩
 
+### 在线版
+
+[打开 Pocket Field](https://ssgaryss.github.io/Pokemon/)
+
+使用 GitHub Pages 托管。每次推送到 `main` 分支后，GitHub Actions 会先检查脚本并运行测试，再自动更新网站；部署状态可以在仓库的 **Actions** 页面查看。
+
 ### 离线版
 
 下载仓库后，用现代浏览器直接打开根目录的 **PocketField.html**。这份单文件包含游戏所需的代码、样式、像素画与声音，无需服务器。
