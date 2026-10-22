@@ -2,6 +2,7 @@
   "name": "pocket-field",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "A playable, original Game Boy inspired creature adventure.",
   "scripts": {

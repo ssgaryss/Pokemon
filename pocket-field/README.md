@@ -39,3 +39,7 @@
 - `dist/audio.js`：Web Audio 原创芯片音乐与音效，默认静音。
 
 所有游戏像素图案均由代码绘制，无第三方图片素材。网页字体可在联网时加载 Google Fonts，断网使用系统后备字体。
+
+## 许可证
+
+本项目采用 [MIT License](../LICENSE)。Copyright (c) 2026 邱汇迪。第三方资源仍适用其各自的许可证。

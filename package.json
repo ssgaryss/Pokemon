@@ -2,6 +2,7 @@
   "name": "pokemon-pocket-field",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "description": "Pocket Field: a playable original Game Boy inspired creature adventure.",
   "scripts": {
     "dev": "node pocket-field/server.mjs",
